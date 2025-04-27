@@ -1,2 +1,0 @@
-
-select * from DB_ECOMM.DBT_TRANSFORMED_DATA.USERS

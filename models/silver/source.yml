@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: BRONZE
+    database: HEALTHCAREDB
+    schema: BRONZE
+    tables:
+      - name: NH_CITATION_DESCRIPTIONS
+      - name:   NH_COVID_VAX_AVERAGES
+      - name:   NH_COVID_VAX_PROVIDER
+      - name:   NH_DATA_COLLECTION_INTERVALS
+      - name:   NH_FIRE_SAFETY_CITATIONS
+      - name:   NH_HEALTH_CITATIONS
+      - name:   NH_HLTH_INSPEC_CUTPOINTS_STATE
+      - name:   NH_OWNERSHIP
+      - name:   NH_PENALTIES
+      - name:   NH_PROVIDER_INFO
+      - name:   NH_QUALITY_MSR_CLAIMS
+      - name:   NH_QUALITY_MSR_MDS
+      - name: NH_STATE_US_AVERAGES
+      - name: NH_SURVEY_DATES
+      - name: NH_SURVEY_SUMMARY
+      - name: SNF_QRP_NATIONAL_DATA
+      - name: SNF_QRP_PROVIDER_DATA
+      - name: SNF_VBP_AGGREGATE_PERFORMANCE
+      - name: SNF_VBP_FACILITY_PERFORMANCE
+      - name: SWING_BED_SNF_DATA
