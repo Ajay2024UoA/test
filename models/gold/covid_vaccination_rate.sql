@@ -1,0 +1,13 @@
+{{ config(materialized='table') }}
+
+select 
+    CMS_CERTIFICATION_NUMBER_CCN,
+    DATE_VACCINATION_DATA_LAST_UPDATED,
+    STATE,
+    --REPORT_DATE,
+    --REPORT_MONTH,
+    PERCENT_OF_STAFF_WHO_ARE_UP_TO_DATE_ON_THEIR_VACCINES  ,
+    PERCENT_OF_RESIDENTS_WHO_ARE_UP_TO_DATE_ON_THEIR_VACCINES
+ 
+ from {{ref('nh_covid_vax_provider')}}
+    

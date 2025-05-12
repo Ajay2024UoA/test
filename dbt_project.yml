@@ -7,14 +7,18 @@ analysis-paths: ["analysis"]
 test-paths: ["tests"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
+dispatch:
+  - macro_namespace: dbt
+    search_order: ['healthcare_project', 'dbt']
 
-
+vars:
+  target_db: 'healthcaredb'
 models:
   healthcare_project:
     +materialized: table  # Default materialization for all models
 
     bronze:
-      +enabled: false  # We don’t model bronze, just ingest raw files
+      +enabled: true
 
     silver:
       +schema: silver
