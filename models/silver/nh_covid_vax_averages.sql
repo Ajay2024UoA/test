@@ -1,0 +1,16 @@
+{{
+  config(
+    materialized="table",
+    schema=set_schema_based_on_folder()
+  )
+}}
+
+
+SELECT 
+    PERCENT_OF_RESIDENTS_WHO_ARE_UP_TO_DATE_ON_THEIR_VACCINES,
+--REPORT_DATE,
+--REPORT_MONTH,
+STATE,
+DATE_VACCINATION_DATA_LAST_UPDATED,
+PERCENT_OF_STAFF_WHO_ARE_UP_TO_DATE_ON_THEIR_VACCINES,
+FROM {{ source('BRONZE', 'NH_COVID_VAX_AVERAGES') }}
